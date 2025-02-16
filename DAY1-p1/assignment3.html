@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="RegistrationForm">
+        <h1>Registration Form</h1>
+
+        <form id="registrationForm">
+            <label for="name">Name: <input type="text" name="name" id="name" required></label>
+            <br><br>
+
+            <label for="email">Email: <input type="email" name="email" id="email" required></label>
+            <br><br>
+
+            <label for="password">Password: <input type="password" name="password" id="password" required></label>
+            <br><br>
+
+            <label>Gender:
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+            </label>
+            <br><br>
+
+            <label>Hobbies: <br>
+                <input type="checkbox" name="hobbies" value="Reading"> Reading <br>
+                <input type="checkbox" name="hobbies" value="Travelling"> Travelling <br>
+                <input type="checkbox" name="hobbies" value="Cooking"> Cooking <br>
+                <input type="checkbox" name="hobbies" value="Sports"> Sports <br>
+            </label>
+            <br>
+
+            <label for="city">City:
+                <select name="city" id="city" required>
+                    <option value="">Select City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Pune">Pune</option>
+                </select>
+            </label>
+            <br><br>
+
+            <label for="dob">Date of Birth: <input type="date" name="dob" id="dob" required></label>
+            <br><br>
+
+            <label for="phone">Phone Number: <input type="number" name="phone" id="phone" required></label>
+            <br><br>
+
+            <label for="address">Address: <br>
+                <textarea name="address" id="address" rows="5" cols="50" required></textarea>
+            </label>
+            <br><br>
+
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent actual submission
+            window.location.href = "thanku.html";  // Redirect to thank you page
+        });
+    </script>
+</body>
+</html>
